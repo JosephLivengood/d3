@@ -1,9 +1,23 @@
     body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         width: 960px;
-        height: 5000px;
+        height: 950px;
         position: relative;
     }
+
+    h1 {
+        margin-bottom: 0;
+        text-align: center;
+        text-decoration: underline;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: darkgreen;
+    }
+
+    #barchart {
+        margin-left: 10%;
+        margin-top: 10%;
+        width: 1000px;
+    }   
 
     svg {
         width: 100%;
@@ -20,9 +34,10 @@
         background: none repeat scroll 0 0 white;
         border: 0 none;
         border-radius: 8px 8px 8px 8px;
-        box-shadow: -3px 3px 15px #888888;
-        color: black;
-        font: 12px sans-serif;
+        box-shadow: -5px 5px 15px black;
+        color: dodgerblue;
+        font: 15px sans-serif;
+        font-weight:700;
         padding: 5px;
         text-align: center;
     }
@@ -31,9 +46,12 @@
         font: 10px sans-serif;
         color: white;
     }
+
     text.value {
         font-size: 120%;
-        fill: white;
+        fill: yellow;
+        transform: rotate(-2deg);
+        text-shadow: 3px 3px black;
     }
 
     .axisHorizontal path{
@@ -42,10 +60,10 @@
 
     .axisHorizontal .tick line {
         stroke-width: 1;
-        stroke: rgba(0, 0, 0, 0.2);
+        stroke: rgba(0, 0, 0, 0.7);
     }
 
     .bar {
-        fill: steelblue;
+        fill: green;
         fill-opacity: .9;
     }
