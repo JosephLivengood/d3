@@ -5,7 +5,6 @@ var margin = {top: 30, right: 20, bottom: 30, left: 50},
 var x = d3.scale.linear().range([0, width]); //d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
-
 var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(10);
 
@@ -23,6 +22,8 @@ var svg = d3.select("body")
     .append("g")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
+
+d3.select("#script-warning").html(" ");
 
 d3.csv("./resources/scatter.csv", function(error, data) {
     data.forEach(function(d) {
