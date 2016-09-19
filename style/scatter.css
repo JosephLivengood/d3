@@ -15,6 +15,9 @@ path {
   stroke-width: 1;
   shape-rendering: crispEdges; }
 
+.alert {
+  width: 200px; }
+
 .tip {
   font: 15px Arial;
   color: blue;
