@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACA,IAAI,EAAE,UAAU;;AAEpB,IAAI;EACA,MAAM,EAAE,SAAS;EACjB,YAAY,EAAE,CAAC;EACf,IAAI,EAAE,IAAI;;AAEd,sBAAsB;EAClB,IAAI,EAAE,IAAI;EACV,MAAM,EAAE,IAAI;EACZ,YAAY,EAAE,CAAC;EACf,eAAe,EAAE,UAAU",
+"sources": ["scatter.sass"],
+"names": [],
+"file": "scatter.css"
+}
