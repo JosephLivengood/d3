@@ -4,11 +4,11 @@ A collection of D3 projects using json data and D3/Sass!
 
 70% Complete- Visualize Data with a Bar Chart (LOADING JSON)
 
-    Needs styling the right way
+    Needs styling the right way&nav
 
-60%- Visualize Data with a Scatterplot Graph (LOADING LOCAL CSV)
+90%- Visualize Data with a Scatterplot Graph (LOADING LOCAL CSV)
 
-    Needs styling the right way + anchoring of points to correct article
+    May want to anchor points to a link of allegation & Navbar needed when index page is structured!
 
 0%- Visualize Data with a Heat Map
 
