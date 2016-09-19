@@ -4,19 +4,6 @@ body {
   height: 950px;
   position: relative; }
 
-#scatterplot {
-  font: 12px Arial; }
-  #scatterplot path {
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none; }
-  #scatterplot .axis path,
-  #scatterplot .axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges; }
-
 h1 {
   margin-bottom: 0;
   text-align: center;
@@ -69,4 +56,4 @@ text {
   fill: green;
   fill-opacity: 0.9; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=barchart.css.map */
