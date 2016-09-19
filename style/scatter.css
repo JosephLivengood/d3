@@ -1,5 +1,8 @@
 body {
-  font: 12px Arial; }
+  font: 12px Arial;
+  background-image: url("http://wallpapercave.com/wp/PCTayiQ.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 path {
   stroke: steelblue;
@@ -15,6 +18,29 @@ path {
 .tip {
   font: 15px Arial;
   color: blue;
-  background-color: rgba(211, 211, 211, 0.5); }
+  background-color: rgba(211, 211, 211, 0.8);
+  z-index: 99; }
+
+.title {
+  font: 18px Arial;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); }
+
+circle {
+  stroke: #cccccc;
+  stroke-width: 1px;
+  cursor: pointer; }
+
+circle:hover {
+  stroke: black; }
+
+svg {
+  background-color: #fff;
+  opacity: 0.8;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5); }
+
+footer {
+  color: white;
+  font-weight: bold; }
 
 /*# sourceMappingURL=scatter.css.map */

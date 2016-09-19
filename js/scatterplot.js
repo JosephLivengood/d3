@@ -15,7 +15,7 @@ var valueline = d3.svg.line()
     .x(function(d) { return x(d.Seconds); })
     .y(function(d) { return y(d.Place); });
 
-var tip = d3.select('body')
+var tip = d3.select('#scatter')
     .append('div')
     .attr('class', 'tip')
     .style('border', '1px solid steelblue')
@@ -29,15 +29,19 @@ var tip = d3.select('body')
             tip.style('display', 'none');
       });
 
-var svg = d3.select("body")
+var svg = d3.select("#scatter")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
     .append("g")
         .attr("transform", 
-              "translate(" + margin.left + "," + margin.top + ")");
+              "translate(" + margin.left + "," + margin.top + ")")
 
 d3.select("#script-warning").html(" ");
+
+var foot = d3.select("footer")
+    .append("div")
+    .html("See the data used <a href='./resources/scatter.csv'>HERE</a>!")
 
 d3.csv("./resources/scatter.csv", function(error, data) {
     data.forEach(function(d) {
@@ -51,7 +55,7 @@ d3.csv("./resources/scatter.csv", function(error, data) {
 
     //x.domain(d3.extent(data, function(d) { return d.Seconds; }));
     x.domain([0, 210]); //This data wont ever be changed, lets just hard code the domain.
-    y.domain([0, d3.max(data, function(d) { return d.Place; })]);
+    y.domain([1, d3.max(data, function(d) { return d.Place; })]);
 
     /* A path line doesn't make too much sense looking at it
     svg.append("path")
@@ -83,6 +87,13 @@ d3.csv("./resources/scatter.csv", function(error, data) {
             }
                 return "red";
         });
+    
+    svg.append("text")
+      .attr("x", (width / 2))
+      .attr("y", -margin.top/2 +10)
+      .attr("text-anchor", "middle")
+      .attr("class", "title")
+      .text("35 Fastest times up Alpe d'Huez w/ Doping Allegations");
 
     svg.selectAll("text")
         .data(data)
@@ -91,7 +102,35 @@ d3.csv("./resources/scatter.csv", function(error, data) {
         .attr("x", function(d) { return x(d.Seconds); })
         .attr("y", function(d) { return y(d.Place); })
         .attr("transform", "translate(8,+3)")
-        .style("font-weight", function(d) { return (d.Doping == "") ? "bold" : ""; });
+        .style("font-weight", function(d) { return (d.Doping == "CLEAN!") ? "bold" : ""; });
+    
+    svg.append("circle")
+        .attr("cx", "600")
+        .attr("cy", "400")
+        .attr("r", 6.5)
+        .attr("fill", "green");
+    
+    svg.append("text")
+        .attr("x", "608")
+        .attr("y", "405")
+        .attr("text-anchor", "left")
+        .attr("class", "legend")
+        .text("No doping allegations!")
+        .style("font-weight", "bold");
+    
+    svg.append("circle")
+        .attr("cx", "600")
+        .attr("cy", "420")
+        .attr("r", 6.5)
+        .attr("fill", "red");
+    
+    svg.append("text")
+        .attr("x", "608")
+        .attr("y", "425")
+        .attr("text-anchor", "left")
+        .attr("class", "legend")
+        .text("Doping allegations!")
+        .style("font-weight", "bold");  
     
     svg.append("g")
         .attr("class", "x axis")
