@@ -30,10 +30,10 @@ h1 {
   height: 800px;
   margin: auto;
   box-shadow: -3px 3px 20px black;
-  background-color: black; }
+  background-color: white; }
 
 .link {
   stroke-width: 1px;
-  stroke: #CCC; }
+  stroke: black; }
 
 /*# sourceMappingURL=force.css.map */
