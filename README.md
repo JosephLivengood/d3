@@ -8,10 +8,14 @@ A collection of D3 projects using json data and D3/Sass!
 
 90%- Visualize Data with a Scatterplot Graph (LOADING LOCAL CSV)
 
-    May want to anchor points to a link of allegation & Navbar needed when index page is structured!
+    May want to anchor data points to links for each & Navbar needed when index page is structured!
 
-0%- Visualize Data with a Heat Map
+90%- Visualize Data with a Heat Map
 
-0%- Show National Contiguity with a Force Directed Graph
+    Navbar needed when index page is structured!
+
+90%- Show National Contiguity with a Force Directed Graph
+
+    Navbar needed when index page is structured!
 
 0%- Map Data Across the Globe
